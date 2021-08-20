@@ -7,6 +7,11 @@
   margin-inline-end:0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,7 +30,7 @@ body {
 	min-height: 100%;
 }
 
-.main {
+.content {
 	flex: 1 0 auto;
 }
 .footer {
@@ -39,20 +44,14 @@ body {
 }
 
 .content__body {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 40px;
 }
+
 .aside {
-  flex: 0 0 300px;
+  min-width: 250px;
 }
-.section {
-  width: 100%;
-}
-
-.section__body {
-  display: flex;
-  flex-direction: column;
-}
-
 
 a {
   text-decoration: none;
