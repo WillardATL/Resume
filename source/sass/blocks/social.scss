@@ -1,0 +1,17 @@
+.social {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    &__item {
+        flex: 0 0 30px;
+    }
+    &__icon {
+        max-width: 100%;
+        fill: $color-bg;
+        &:hover,
+        &:active,
+        &:focus {
+            fill: $color-theme;
+        }
+    }
+}
