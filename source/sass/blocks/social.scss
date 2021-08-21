@@ -11,7 +11,13 @@
         &:hover,
         &:active,
         &:focus {
-            fill: $color-theme;
+            fill: darken($color-theme-light, 10);
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .social {
+        align-self: center;
     }
 }

@@ -1,32 +1,33 @@
 .header {
-    text-align: center;
-    padding-top: 30px;
+    text-align: left;
+    padding-top: 10px;
+    background-color: $color-bg;
     .header__title {
         font-family: 'Exo 2', 'Arial Narrow', sans-serif;
-        font-size: 72px;
+        font-size: 54px;
         line-height: 120%;
         font-weight: 800;
         color: $color-text;
     }
     .header__subtitle {
-        font-family: 'Permanent Marker', 'Arial Narrow', sans-serif;
-        font-size: 34px;
+        font-family: 'Roboto', 'Arial Narrow', sans-serif;
+        font-size: 21px;
         line-height: 120%;
-        font-weight: 400;
-        color: $color-theme;
-        margin-bottom: 50px;
+        font-weight: 700;
+        color: $color-theme-light;
+        margin-bottom: 20px;
     }
     .header__info {
-        background-color: lighten($color-text, 70);
+        background-color: lighten($color-theme-dark, 70);
         &-body {
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
         }
     }
     .header__contacts {
         display: flex;
-        gap: 50px;
+        gap: 40px;
         margin: 15px 0 15px 30px;
         font-size: 16px;
         font-weight: 500;
@@ -40,23 +41,39 @@
     .header__email::before,
     .header__phone::before,
     .header__adress::before {
-        content: '';
+        content: '\2600';
         display: block;
-        height: 24px;
-        width: 24px;
-        background-image: url("../img/icon-email.png");
-        background-size: 24px 24px;
+        font-size: 24px;
+        color: darken($color-theme-light, 10);
         position: absolute;
         top: 1px;
-        left: -30px;
+        left: -25px;
     }
-    .header__email::before {
-        background-image: url("../img/icon-email.png");
-    }
-    .header__phone::before {
-        background-image: url("../img/icon-phone.png");
-    }
-    .header__adress::before {
-        background-image: url("../img/icon-map.png");
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        text-align: center;
+        .header__title {
+            font-size: 34px;
+        }
+        .header__subtitle {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .header__contacts {
+            flex-direction: column;
+            gap: 10px;
+            margin: 15px 0 15px 0px;
+        }
+        .header__info-body {
+            flex-direction: column;
+            align-items: center;
+        }
+        .header__email::before,
+        .header__phone::before,
+        .header__adress::before {
+            display: none;
+        }
     }
 }

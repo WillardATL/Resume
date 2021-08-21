@@ -7,42 +7,27 @@
         gap: 30px;
         align-items: center;
         justify-content: flex-start;
-        margin-top: 50px;
-    }
-    .title__icon {
-        flex: 0 0 40px;
-        background-color: $color-theme;
-        border-radius: 20px;
-        &-img {
-            max-width: 100%;
-            display: block;
-        }
+        margin-top: 30px;
     }
     &__box {
         display: grid;
         row-gap: 5px;
-        margin: 10px 0 20px 15px;
+        margin: 15px 0 15px 15px;
     }
     &__dotbox {
         grid-template-columns: auto 100px;
     }
     &__text {
-        display: block;
-        span {
-            font-size: 80%;
+        &-light {
             color: lighten($color: $color-text, $amount: 60);
+            font-weight: 400;
         }
         &-bold {
             font-weight: 700;
         }
         &-small {
             font-size: 80%;
-            //font-weight: bold;
             margin-bottom: 10px;
-            span {
-                color: lighten($color: $color-text, $amount: 60);
-                font-style: italic;
-            }
         }
     }
     &__level {
@@ -53,14 +38,30 @@
             width: 16px;
             height: 16px;
             background-color: transparent;
-            border: 2px solid $color-theme;
+            border: 2px solid $color-theme-light;
             border-radius: 8px;
             &-color {
-                background-color: $color-theme;
+                background-color: $color-theme-light;
             }
         }
     }
     &__link {
-        border-bottom: 3px dotted $color-theme;
+        border-bottom: 3px dotted $color-theme-light;
+    }
+    .title__icon {
+        flex: 0 0 40px;
+        background-color: $color-theme-light;
+        border-radius: 20px;
+        &-img {
+            max-width: 100%;
+            display: block;
+        }
+    }
+    .title-text {
+        font-family: 'Exo 2', 'Arial Narrow', sans-serif;
+        font-size: 16px;
+        line-height: 120%;
+        font-weight: 800;
+        color: $color-text;
     }
 }
