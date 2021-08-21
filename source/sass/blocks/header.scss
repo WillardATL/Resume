@@ -41,12 +41,14 @@
     .header__email::before,
     .header__phone::before,
     .header__adress::before {
-        content: '\2600';
+        content: '';
         display: block;
-        font-size: 24px;
-        color: darken($color-theme-light, 10);
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background-color: darken($color-theme-light, 10);
         position: absolute;
-        top: 1px;
+        top: 6px;
         left: -25px;
     }
 }
