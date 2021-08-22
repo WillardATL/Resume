@@ -37,19 +37,20 @@
     .header__phone,
     .header__adress {
         position: relative;
-    }
-    .header__email::before,
-    .header__phone::before,
-    .header__adress::before {
-        content: '';
-        display: block;
-        width: 12px;
-        height: 12px;
-        border-radius: 6px;
-        background-color: darken($color-theme-light, 10);
-        position: absolute;
-        top: 6px;
-        left: -25px;
+        &::before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 6px;
+            background-color: $color-bg;
+            position: absolute;
+            top: 6px;
+            left: -25px;
+        }
+        &:hover::before {
+            background-color: darken($color-theme-light, 10); 
+        }
     }
 }
 
